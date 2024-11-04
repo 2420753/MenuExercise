@@ -18,7 +18,9 @@ public class Main {
         //System.out.println(divideResult);
 
 
-        selectOption();
+        //selectOption();
+
+        displayMenu();
 
 
 
@@ -56,15 +58,24 @@ public class Main {
                 System.out.println("You're input is valid!");
                 readNumber = false;
             } catch (NumberFormatException e) {
-                System.out.print("Invalid number, try again:\n ");
+                System.out.print("Please enter a number, try again:\n ");
 
             }
 
         }
 
-
         return numberEntered;
 
+    }
+
+    static int displayMenu() {
+        System.out.println("Welcome to my calculator!");
+        System.out.println("1. Add");
+        System.out.println("2. Subtract");
+        System.out.println("3. Multiply");
+        System.out.println("4. Divide");
+        System.out.println("5. Exit");
+        return selectOption();
     }
 
 
