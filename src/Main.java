@@ -4,6 +4,35 @@ public class Main {
     public static final Scanner stdin = new Scanner(System.in);
     public static void main(String[] args) {
 
+        System.out.printf("Enter first number: ");
+        int firstNumber = stdin.nextInt();
+
+        System.out.printf("Enter second number: ");
+        int secondNumber = stdin.nextInt();
+
+
+
+        switch (displayMenu()) {
+            case 1:
+                System.out.printf("Result is: " + add(firstNumber, secondNumber));
+                break;
+            case 2:
+                System.out.printf("Result is: " + subtract(firstNumber, secondNumber));
+                break;
+            case 3:
+                System.out.printf("Result is: " + multiply(firstNumber, secondNumber));
+                break;
+            case 4:
+                System.out.printf("Result is: " + divide(firstNumber, secondNumber));
+                break;
+            case 5:
+                System.out.print("Program will now terminate!");
+                break;
+
+        }
+
+        int option = menu();
+
 
         //int result = add(3, 5);
         //System.out.println(result);
@@ -20,7 +49,7 @@ public class Main {
 
         //selectOption();
 
-        displayMenu();
+        //displayMenu();
 
 
 
@@ -33,7 +62,7 @@ public class Main {
     }
 
     static int subtract(int num1, int num2) {
-        return num1 - num2;
+        return num2 - num1;
     }
 
     static int multiply(int num1, int num2) {
@@ -41,7 +70,7 @@ public class Main {
     }
 
     static int divide(int num1, int num2) {
-        return num1 / num2;
+        return num2 / num1;
     }
 
     // Selecting the option function
@@ -76,6 +105,11 @@ public class Main {
         System.out.println("4. Divide");
         System.out.println("5. Exit");
         return selectOption();
+    }
+
+    static int menu() {
+
+        return displayMenu();
     }
 
 
