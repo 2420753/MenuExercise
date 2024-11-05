@@ -41,8 +41,15 @@ public class Main {
                     System.out.printf("You entered " + secondNumber + " / " + firstNumber + " = %d\n", division);
                     break;
             }
-            // break statement to exit loop, once result is printed to the terminal.
-            break;
+
+            // Asks the program if they want to continue
+            System.out.println("Would you like to run the program again? Y/N: ");
+            String userChoice = stdin.next();
+
+            if (!userChoice.equalsIgnoreCase("Y")) {
+                System.out.println("The program will now terminate! - Thanks for using the program.");
+                break;
+            }
 
         }
     }
