@@ -4,6 +4,10 @@ public class Main {
     public static final Scanner stdin = new Scanner(System.in);
     public static void main(String[] args) {
 
+        // Future task = Ask the user once the result is printed if they'd like to do the program to run again!
+
+        // This program, is a calculator that asks the user to enter an option and will calculate the value.
+
         while (true) {
             int option = menu();
 
@@ -22,59 +26,25 @@ public class Main {
             switch (option) {
                 case 1:
                     int adding = add(firstNumber, secondNumber);
-                    System.out.printf("Result is: " + adding);
+                    System.out.printf("You entered " + firstNumber + " + " + secondNumber + " = %d\n", adding);
                     break;
                 case 2:
                     int subtracting = subtract(secondNumber, firstNumber);
-                    System.out.printf("Result is: " + subtracting);
+                    System.out.printf("You entered " + secondNumber + " - " + firstNumber + " = %d\n", subtracting);
                     break;
                 case 3:
-                    System.out.printf("Result is: " + multiply(firstNumber, secondNumber));
+                    int multiplication = multiply(firstNumber, secondNumber);
+                    System.out.printf("You entered " + firstNumber + " * " + secondNumber + " = %d\n", multiplication);
                     break;
                 case 4:
-                    System.out.printf("Result is: " + divide(firstNumber, secondNumber));
+                    int division = divide(secondNumber, firstNumber);
+                    System.out.printf("You entered " + secondNumber + " / " + firstNumber + " = %d\n", division);
                     break;
-                case 5:
-                    System.out.print("Program will now terminate!");
-                    break;
-
             }
+            // break statement to exit loop, once result is printed to the terminal.
             break;
 
         }
-
-
-
-
-        // Code works, although not the output I'm wanting.
-        // I want the menu to run first, then once the user has selected an option.
-        // The program will calculate the value and print it off the user
-        // If you run the program, it will show you the mess I'm on about.
-
-
-
-
-
-
-        //int result = add(3, 5);
-        //System.out.println(result);
-
-        //int subResult = subtract(5, 3);
-        //System.out.println(subResult);
-
-        //int multiplyResult = multiply(5, 5);
-        //System.out.println(multiplyResult);
-
-        //int divideResult = divide(20, 5);
-        //System.out.println(divideResult);
-
-
-        //selectOption();
-
-        //displayMenu();
-
-
-
     }
 
     // Creating functionality:
@@ -110,9 +80,7 @@ public class Main {
                 readNumber = false;
             } catch (NumberFormatException e) {
                 System.out.print("Please enter a number, try again:\n ");
-
             }
-
         }
 
         return numberEntered;
@@ -135,6 +103,4 @@ public class Main {
 
         return displayMenu();
     }
-
-
 }
